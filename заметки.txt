@@ -34,10 +34,3 @@ global $USER;
 $USER->Authorize(1);
 LocalRedirect("/bitrix/admin/");
 ?>
-
-
-
-getBLockIdByCode("structure"),
-
-
-print_r($_SITE_OPTIONS['REGION_NUMBER']['VALUE']);  номер региона

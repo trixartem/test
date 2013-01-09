@@ -1,0 +1,43 @@
+еще один нюанс на будующее, когда коммитишь, пиши
+1) если исправляешь ошибки "fix #1111" (после решетки номер задачи)
+2) если это какойто новый функционал "Issue #1111" (после решетки номер задачи)
+если что-то нужно руками в базу добавить прикладывай к задаче sql запрос (на будующее)
+
+
+
+
+Например если импортируется с phpmyadmin на денвере, то увеличить ограничения в php.ini
+Z:\usr\local\php5\php.ini
+найти
+post_max_size = 2M
+и заменить на
+post_max_size = 2000M
+
+найти
+upload_max_filesize = 2M
+и заменить на
+upload_max_filesize = 2000M
+
+ну и лимит времени обработки скрипта тоже можно увеличить max_execution_time и max_input_time
+например поставить
+max_execution_time = 18000
+max_input_time = 18000
+
+и памяти можно увеличить
+memory_limit = 128M
+
+и перезагрузить сервер.
+//*** получить админские права.если сайт на битриксе
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+global $USER;
+$USER->Authorize(1);
+LocalRedirect("/bitrix/admin/");
+?>
+
+
+
+getBLockIdByCode("structure"),
+
+
+print_r($_SITE_OPTIONS['REGION_NUMBER']['VALUE']);  номер региона
